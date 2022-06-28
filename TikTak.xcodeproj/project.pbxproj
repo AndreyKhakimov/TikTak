@@ -29,6 +29,11 @@
 		422B9E3B2867032D0067A5DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422B9E3A2867032D0067A5DD /* GoogleService-Info.plist */; };
 		422B9E3F28671F0D0067A5DD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E3E28671F0D0067A5DD /* Extensions.swift */; };
 		422B9E41286726220067A5DD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E40286726220067A5DD /* PostModel.swift */; };
+		422B9E432868561E0067A5DD /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E422868561E0067A5DD /* CommentsViewController.swift */; };
+		422B9E45286A0F6D0067A5DD /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E44286A0F6D0067A5DD /* PostComment.swift */; };
+		422B9E47286A0FE70067A5DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E46286A0FE70067A5DD /* User.swift */; };
+		422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E48286A16110067A5DD /* CommentTableViewCell.swift */; };
+		4262A863286A3E90005C5693 /* BMW.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4262A862286A3E90005C5693 /* BMW.mp4 */; };
 		9E3F9669DDF03158416214C1 /* Pods_TikTak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		422B9E3A2867032D0067A5DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		422B9E3E28671F0D0067A5DD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		422B9E40286726220067A5DD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		422B9E422868561E0067A5DD /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		422B9E44286A0F6D0067A5DD /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		422B9E46286A0FE70067A5DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		422B9E48286A16110067A5DD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		4262A862286A3E90005C5693 /* BMW.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMW.mp4; sourceTree = "<group>"; };
 		98F2021EA85931D4CF4C1FEA /* Pods-TikTak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTak.release.xcconfig"; path = "Target Support Files/Pods-TikTak/Pods-TikTak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				422B9E052866107D0067A5DD /* Assets.xcassets */,
+				4262A862286A3E90005C5693 /* BMW.mp4 */,
 				422B9E3A2867032D0067A5DD /* GoogleService-Info.plist */,
 				422B9DFC2866107B0067A5DD /* AppDelegate.swift */,
 				422B9DFE2866107B0067A5DD /* SceneDelegate.swift */,
@@ -157,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				422B9E40286726220067A5DD /* PostModel.swift */,
+				422B9E44286A0F6D0067A5DD /* PostComment.swift */,
+				422B9E46286A0FE70067A5DD /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 				422B9E2428661CF00067A5DD /* SignUpViewController.swift */,
 				422B9E2628661D010067A5DD /* SettingsViewController.swift */,
 				422B9E2C28661D800067A5DD /* PostViewController.swift */,
+				422B9E422868561E0067A5DD /* CommentsViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 		422B9E2B28661D5B0067A5DD /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				422B9E48286A16110067A5DD /* CommentTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -282,6 +297,7 @@
 			files = (
 				422B9E092866107D0067A5DD /* LaunchScreen.storyboard in Resources */,
 				422B9E062866107D0067A5DD /* Assets.xcassets in Resources */,
+				4262A863286A3E90005C5693 /* BMW.mp4 in Resources */,
 				422B9E3B2867032D0067A5DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,16 +371,20 @@
 				422B9E3728661DD50067A5DD /* HapticsManager.swift in Sources */,
 				422B9E3F28671F0D0067A5DD /* Extensions.swift in Sources */,
 				422B9E3328661DB20067A5DD /* DatabaseManager.swift in Sources */,
+				422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */,
 				422B9E1928661CA30067A5DD /* ExploreViewController.swift in Sources */,
 				422B9E2128661CD60067A5DD /* UserListViewController.swift in Sources */,
 				422B9E2728661D010067A5DD /* SettingsViewController.swift in Sources */,
 				422B9E2D28661D800067A5DD /* PostViewController.swift in Sources */,
 				422B9E1B28661CAF0067A5DD /* CameraViewController.swift in Sources */,
+				422B9E432868561E0067A5DD /* CommentsViewController.swift in Sources */,
 				422B9E2928661D1D0067A5DD /* TabBarViewController.swift in Sources */,
+				422B9E47286A0FE70067A5DD /* User.swift in Sources */,
 				422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */,
 				422B9E2528661CF00067A5DD /* SignUpViewController.swift in Sources */,
 				422B9E3528661DC10067A5DD /* AuthenticationManager.swift in Sources */,
 				422B9E1D28661CBC0067A5DD /* NotificationsViewController.swift in Sources */,
+				422B9E45286A0F6D0067A5DD /* PostComment.swift in Sources */,
 				422B9E2328661CE70067A5DD /* SignInViewController.swift in Sources */,
 				422B9E41286726220067A5DD /* PostModel.swift in Sources */,
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,

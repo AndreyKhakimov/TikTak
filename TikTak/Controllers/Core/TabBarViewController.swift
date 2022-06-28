@@ -19,9 +19,8 @@ class TabBarViewController: UITabBarController {
         let explore = ExploreViewController()
         let camera = CameraViewController()
         let notifications = NotificationsViewController()
-        let profile = ProfileViewController()
+        let profile = ProfileViewController(user: User(username: "self", profilePictureURL: nil, identifier: "abc123"))
         
-        home.title = "Home"
         explore.title = "Explore"
         notifications.title = "Notifications"
         profile.title = "Profile"
@@ -30,6 +29,10 @@ class TabBarViewController: UITabBarController {
         let navVC2 = UINavigationController(rootViewController: explore)
         let navVC3 = UINavigationController(rootViewController: notifications)
         let navVC4 = UINavigationController(rootViewController: profile)
+        
+        navVC1.navigationBar.backgroundColor = .clear
+        navVC1.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navVC1.navigationBar.shadowImage = UIImage()
         
         navVC1.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 1)
         navVC2.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 2)
