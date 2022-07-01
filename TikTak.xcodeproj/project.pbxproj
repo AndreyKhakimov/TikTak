@@ -34,6 +34,15 @@
 		422B9E47286A0FE70067A5DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E46286A0FE70067A5DD /* User.swift */; };
 		422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E48286A16110067A5DD /* CommentTableViewCell.swift */; };
 		4262A863286A3E90005C5693 /* BMW.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4262A862286A3E90005C5693 /* BMW.mp4 */; };
+		4262A865286B16A4005C5693 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A864286B16A4005C5693 /* RecordButton.swift */; };
+		4262A867286B31B9005C5693 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A866286B31B9005C5693 /* CaptionViewController.swift */; };
+		4262A869286F0C60005C5693 /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A868286F0C60005C5693 /* ExploreSection.swift */; };
+		4262A86B286F0C86005C5693 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A86A286F0C86005C5693 /* ExploreCell.swift */; };
+		4262A86D286F0CAE005C5693 /* ExploreSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A86C286F0CAE005C5693 /* ExploreSectionType.swift */; };
+		4262A86F286F0E6B005C5693 /* ExploreBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A86E286F0E6B005C5693 /* ExploreBannerViewModel.swift */; };
+		4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */; };
+		4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */; };
+		4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */; };
 		9E3F9669DDF03158416214C1 /* Pods_TikTak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +78,15 @@
 		422B9E46286A0FE70067A5DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		422B9E48286A16110067A5DD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		4262A862286A3E90005C5693 /* BMW.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMW.mp4; sourceTree = "<group>"; };
+		4262A864286B16A4005C5693 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		4262A866286B31B9005C5693 /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
+		4262A868286F0C60005C5693 /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
+		4262A86A286F0C86005C5693 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
+		4262A86C286F0CAE005C5693 /* ExploreSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSectionType.swift; sourceTree = "<group>"; };
+		4262A86E286F0E6B005C5693 /* ExploreBannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerViewModel.swift; sourceTree = "<group>"; };
+		4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostViewModel.swift; sourceTree = "<group>"; };
+		4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagViewModel.swift; sourceTree = "<group>"; };
+		4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserViewModel.swift; sourceTree = "<group>"; };
 		98F2021EA85931D4CF4C1FEA /* Pods-TikTak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTak.release.xcconfig"; path = "Target Support Files/Pods-TikTak/Pods-TikTak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +188,9 @@
 				422B9E40286726220067A5DD /* PostModel.swift */,
 				422B9E44286A0F6D0067A5DD /* PostComment.swift */,
 				422B9E46286A0FE70067A5DD /* User.swift */,
+				4262A868286F0C60005C5693 /* ExploreSection.swift */,
+				4262A86A286F0C86005C5693 /* ExploreCell.swift */,
+				4262A86C286F0CAE005C5693 /* ExploreSectionType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +198,10 @@
 		422B9E1428661BFB0067A5DD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4262A86E286F0E6B005C5693 /* ExploreBannerViewModel.swift */,
+				4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */,
+				4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */,
+				4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +239,7 @@
 				422B9E2628661D010067A5DD /* SettingsViewController.swift */,
 				422B9E2C28661D800067A5DD /* PostViewController.swift */,
 				422B9E422868561E0067A5DD /* CommentsViewController.swift */,
+				4262A866286B31B9005C5693 /* CaptionViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -230,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				422B9E48286A16110067A5DD /* CommentTableViewCell.swift */,
+				4262A864286B16A4005C5693 /* RecordButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -373,9 +400,14 @@
 				422B9E3328661DB20067A5DD /* DatabaseManager.swift in Sources */,
 				422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */,
 				422B9E1928661CA30067A5DD /* ExploreViewController.swift in Sources */,
+				4262A869286F0C60005C5693 /* ExploreSection.swift in Sources */,
 				422B9E2128661CD60067A5DD /* UserListViewController.swift in Sources */,
 				422B9E2728661D010067A5DD /* SettingsViewController.swift in Sources */,
+				4262A86F286F0E6B005C5693 /* ExploreBannerViewModel.swift in Sources */,
+				4262A86B286F0C86005C5693 /* ExploreCell.swift in Sources */,
 				422B9E2D28661D800067A5DD /* PostViewController.swift in Sources */,
+				4262A865286B16A4005C5693 /* RecordButton.swift in Sources */,
+				4262A867286B31B9005C5693 /* CaptionViewController.swift in Sources */,
 				422B9E1B28661CAF0067A5DD /* CameraViewController.swift in Sources */,
 				422B9E432868561E0067A5DD /* CommentsViewController.swift in Sources */,
 				422B9E2928661D1D0067A5DD /* TabBarViewController.swift in Sources */,
@@ -383,14 +415,18 @@
 				422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */,
 				422B9E2528661CF00067A5DD /* SignUpViewController.swift in Sources */,
 				422B9E3528661DC10067A5DD /* AuthenticationManager.swift in Sources */,
+				4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */,
 				422B9E1D28661CBC0067A5DD /* NotificationsViewController.swift in Sources */,
 				422B9E45286A0F6D0067A5DD /* PostComment.swift in Sources */,
+				4262A86D286F0CAE005C5693 /* ExploreSectionType.swift in Sources */,
 				422B9E2328661CE70067A5DD /* SignInViewController.swift in Sources */,
 				422B9E41286726220067A5DD /* PostModel.swift in Sources */,
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,
 				422B9E3128661DA20067A5DD /* StorageManager.swift in Sources */,
+				4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */,
 				422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */,
 				422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */,
+				4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +572,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTak/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -567,6 +605,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTak/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
