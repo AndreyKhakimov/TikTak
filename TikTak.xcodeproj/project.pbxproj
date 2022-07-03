@@ -43,6 +43,12 @@
 		4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */; };
 		4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */; };
 		4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */; };
+		4262A87728702BFF005C5693 /* ExploreBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87628702BFF005C5693 /* ExploreBannerCollectionViewCell.swift */; };
+		4262A87928702C19005C5693 /* ExplorePostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87828702C19005C5693 /* ExplorePostCollectionViewCell.swift */; };
+		4262A87B28702C23005C5693 /* ExploreUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87A28702C23005C5693 /* ExploreUserCollectionViewCell.swift */; };
+		4262A87D28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */; };
+		4262A87F2871A3D1005C5693 /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87E2871A3D1005C5693 /* ExploreManager.swift */; };
+		4262A8812871A52F005C5693 /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = 4262A8802871A52F005C5693 /* explore.json */; };
 		9E3F9669DDF03158416214C1 /* Pods_TikTak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +93,12 @@
 		4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostViewModel.swift; sourceTree = "<group>"; };
 		4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagViewModel.swift; sourceTree = "<group>"; };
 		4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserViewModel.swift; sourceTree = "<group>"; };
+		4262A87628702BFF005C5693 /* ExploreBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4262A87828702C19005C5693 /* ExplorePostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePostCollectionViewCell.swift; sourceTree = "<group>"; };
+		4262A87A28702C23005C5693 /* ExploreUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagCollectionViewCell.swift; sourceTree = "<group>"; };
+		4262A87E2871A3D1005C5693 /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
+		4262A8802871A52F005C5693 /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		98F2021EA85931D4CF4C1FEA /* Pods-TikTak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTak.release.xcconfig"; path = "Target Support Files/Pods-TikTak/Pods-TikTak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +166,7 @@
 		422B9E1028661BB70067A5DD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4262A8802871A52F005C5693 /* explore.json */,
 				422B9E052866107D0067A5DD /* Assets.xcassets */,
 				4262A862286A3E90005C5693 /* BMW.mp4 */,
 				422B9E3A2867032D0067A5DD /* GoogleService-Info.plist */,
@@ -213,6 +226,7 @@
 				422B9E3228661DB20067A5DD /* DatabaseManager.swift */,
 				422B9E3428661DC10067A5DD /* AuthenticationManager.swift */,
 				422B9E3628661DD50067A5DD /* HapticsManager.swift */,
+				4262A87E2871A3D1005C5693 /* ExploreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -257,6 +271,10 @@
 			children = (
 				422B9E48286A16110067A5DD /* CommentTableViewCell.swift */,
 				4262A864286B16A4005C5693 /* RecordButton.swift */,
+				4262A87628702BFF005C5693 /* ExploreBannerCollectionViewCell.swift */,
+				4262A87828702C19005C5693 /* ExplorePostCollectionViewCell.swift */,
+				4262A87A28702C23005C5693 /* ExploreUserCollectionViewCell.swift */,
+				4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -322,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4262A8812871A52F005C5693 /* explore.json in Resources */,
 				422B9E092866107D0067A5DD /* LaunchScreen.storyboard in Resources */,
 				422B9E062866107D0067A5DD /* Assets.xcassets in Resources */,
 				4262A863286A3E90005C5693 /* BMW.mp4 in Resources */,
@@ -403,6 +422,7 @@
 				4262A869286F0C60005C5693 /* ExploreSection.swift in Sources */,
 				422B9E2128661CD60067A5DD /* UserListViewController.swift in Sources */,
 				422B9E2728661D010067A5DD /* SettingsViewController.swift in Sources */,
+				4262A87F2871A3D1005C5693 /* ExploreManager.swift in Sources */,
 				4262A86F286F0E6B005C5693 /* ExploreBannerViewModel.swift in Sources */,
 				4262A86B286F0C86005C5693 /* ExploreCell.swift in Sources */,
 				422B9E2D28661D800067A5DD /* PostViewController.swift in Sources */,
@@ -413,6 +433,7 @@
 				422B9E2928661D1D0067A5DD /* TabBarViewController.swift in Sources */,
 				422B9E47286A0FE70067A5DD /* User.swift in Sources */,
 				422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */,
+				4262A87928702C19005C5693 /* ExplorePostCollectionViewCell.swift in Sources */,
 				422B9E2528661CF00067A5DD /* SignUpViewController.swift in Sources */,
 				422B9E3528661DC10067A5DD /* AuthenticationManager.swift in Sources */,
 				4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */,
@@ -421,12 +442,15 @@
 				4262A86D286F0CAE005C5693 /* ExploreSectionType.swift in Sources */,
 				422B9E2328661CE70067A5DD /* SignInViewController.swift in Sources */,
 				422B9E41286726220067A5DD /* PostModel.swift in Sources */,
+				4262A87D28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift in Sources */,
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,
 				422B9E3128661DA20067A5DD /* StorageManager.swift in Sources */,
 				4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */,
 				422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */,
 				422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */,
+				4262A87B28702C23005C5693 /* ExploreUserCollectionViewCell.swift in Sources */,
 				4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */,
+				4262A87728702BFF005C5693 /* ExploreBannerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ final class HapticsManager {
     
     // Public
     
-    public func vibrateForSeletion() {
+    public func vibrateForSelection() {
         DispatchQueue.main.async {
             let generator = UISelectionFeedbackGenerator()
             generator.prepare()
