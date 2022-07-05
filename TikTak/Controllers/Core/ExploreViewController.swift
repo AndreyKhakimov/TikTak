@@ -24,6 +24,7 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        ExploreManager.shared.delegate = self
         configureModels()
         setUpSearchBar()
         setUpCollectionView()
@@ -206,6 +207,18 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         HapticsManager.shared.vibrateForSelection()
         collectionView.deselectItem(at: indexPath, animated: true)
+        let model = sections[indexPath.section].cells[indexPath.row]
+        
+        switch model {
+        case .banner(viewModel: let viewModel):
+            viewModel.handler()
+        case .post(viewModel: let viewModel):
+            viewModel.handler()
+        case .hashtag(viewModel: let viewModel):
+            viewModel.handler()
+        case .user(viewModel: let viewModel):
+            viewModel.handler()
+        }
     }
     
 }
@@ -353,6 +366,18 @@ extension ExploreViewController {
             
             return sectionLayout
         }
+    }
+    
+}
+
+extension ExploreViewController: ExploreManagerDelegate {
+    func didTapHashTag(_ hashtag: String) {
+        searchBar.text = hashtag
+        searchBar.becomeFirstResponder()
+    }
+    
+    func pushViewController(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

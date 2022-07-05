@@ -49,6 +49,8 @@
 		4262A87D28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */; };
 		4262A87F2871A3D1005C5693 /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A87E2871A3D1005C5693 /* ExploreManager.swift */; };
 		4262A8812871A52F005C5693 /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = 4262A8802871A52F005C5693 /* explore.json */; };
+		4262A884287309CD005C5693 /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A883287309CD005C5693 /* AuthField.swift */; };
+		4262A886287309E8005C5693 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4262A885287309E8005C5693 /* AuthButton.swift */; };
 		9E3F9669DDF03158416214C1 /* Pods_TikTak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagCollectionViewCell.swift; sourceTree = "<group>"; };
 		4262A87E2871A3D1005C5693 /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
 		4262A8802871A52F005C5693 /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
+		4262A883287309CD005C5693 /* AuthField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
+		4262A885287309E8005C5693 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		98F2021EA85931D4CF4C1FEA /* Pods-TikTak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTak.release.xcconfig"; path = "Target Support Files/Pods-TikTak/Pods-TikTak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,9 +251,8 @@
 		422B9E1728661C800067A5DD /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				4262A8822872F40A005C5693 /* Authentication */,
 				422B9E2028661CD60067A5DD /* UserListViewController.swift */,
-				422B9E2228661CE70067A5DD /* SignInViewController.swift */,
-				422B9E2428661CF00067A5DD /* SignUpViewController.swift */,
 				422B9E2628661D010067A5DD /* SettingsViewController.swift */,
 				422B9E2C28661D800067A5DD /* PostViewController.swift */,
 				422B9E422868561E0067A5DD /* CommentsViewController.swift */,
@@ -275,8 +278,19 @@
 				4262A87828702C19005C5693 /* ExplorePostCollectionViewCell.swift */,
 				4262A87A28702C23005C5693 /* ExploreUserCollectionViewCell.swift */,
 				4262A87C28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift */,
+				4262A883287309CD005C5693 /* AuthField.swift */,
+				4262A885287309E8005C5693 /* AuthButton.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		4262A8822872F40A005C5693 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				422B9E2228661CE70067A5DD /* SignInViewController.swift */,
+				422B9E2428661CF00067A5DD /* SignUpViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				422B9E3728661DD50067A5DD /* HapticsManager.swift in Sources */,
+				4262A886287309E8005C5693 /* AuthButton.swift in Sources */,
 				422B9E3F28671F0D0067A5DD /* Extensions.swift in Sources */,
 				422B9E3328661DB20067A5DD /* DatabaseManager.swift in Sources */,
 				422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */,
@@ -446,6 +461,7 @@
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,
 				422B9E3128661DA20067A5DD /* StorageManager.swift in Sources */,
 				4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */,
+				4262A884287309CD005C5693 /* AuthField.swift in Sources */,
 				422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */,
 				422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */,
 				4262A87B28702C23005C5693 /* ExploreUserCollectionViewCell.swift in Sources */,

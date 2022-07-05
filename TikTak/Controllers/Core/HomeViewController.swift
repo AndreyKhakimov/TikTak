@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
         view.addSubview(horizontalScrollView)
         setUpFeed()
         horizontalScrollView.delegate = self
+        horizontalScrollView.contentInsetAdjustmentBehavior = .never
         horizontalScrollView.contentOffset = CGPoint(x: view.width, y: 0)
     }
     
@@ -246,16 +247,13 @@ extension HomeViewController: CommentsViewControllerDelegate {
             viewController.view.frame = CGRect(x: 0, y: self.view.height - frame.height, width: frame.width, height: frame.height)
         } completion: { [weak self] done in
             if done {
-//                DispatchQueue.main.async {
-                    if let currentQueueLabel = OperationQueue.current?.underlyingQueue?.label {
-                        print(currentQueueLabel)
-                    }
+                DispatchQueue.main.async {
                     viewController.view.removeFromSuperview()
                     viewController.removeFromParent()
                     self?.horizontalScrollView.isScrollEnabled = true
                     self?.forYouPageViewController.dataSource = self
                     self?.followingPageViewController.dataSource = self
-//                }
+                }
             }
         }
     }

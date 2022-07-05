@@ -93,7 +93,7 @@ class PostViewController: UIViewController {
         
         let size: CGFloat = 40
         
-        let yStart: CGFloat = view.height - (size * 5) - (tabBarController?.tabBar.height ?? 0)
+        let yStart: CGFloat = view.height - (size * 4) - view.safeAreaInsets.bottom
         for (index, button) in [likeButton, commentButton, shareButton].enumerated() {
             button.frame = CGRect(x: view.width - size - 8, y: yStart + (CGFloat(index) * size * 1.25), width: size, height: size)
         }
@@ -101,7 +101,7 @@ class PostViewController: UIViewController {
         let labelSize = captionLabel.sizeThatFits(CGSize(width: view.width - size - 12, height: view.height))
         captionLabel.frame = CGRect(
             x: 8,
-            y: view.height - 8 - labelSize.height - (tabBarController?.tabBar.height ?? 0),
+            y: view.height - 8 - labelSize.height - view.safeAreaInsets.bottom,
             width: view.width - size - 12,
             height: labelSize.height
         )
