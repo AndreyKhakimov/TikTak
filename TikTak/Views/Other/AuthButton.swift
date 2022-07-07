@@ -17,7 +17,7 @@ class AuthButton: UIButton {
         var title: String {
                 switch self {
                 case .signIn: return "Sign In"
-                case .signUp: return "Sign Un"
+                case .signUp: return "Sign Up"
                 case .plain: return "-"
                 }
             }
