@@ -45,7 +45,7 @@ class CameraViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         cameraView.frame = view.bounds
         let size: CGFloat = 80
-        recordButton.frame = CGRect(x: (view.width - size) / 2, y: view.height - view.safeAreaInsets.bottom, width: size, height: size)
+        recordButton.frame = CGRect(x: (view.width - size) / 2, y: view.height - view.safeAreaInsets.bottom - size / 2, width: size, height: size)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -149,7 +149,10 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
     }
     
     @objc private func didTapNext() {
-        
+        guard let url = recordedVideoURL else { return }
+        // Push caption controller
+        let vc = CaptionViewController(videoURL: url)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

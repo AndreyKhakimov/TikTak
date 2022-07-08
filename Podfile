@@ -12,5 +12,6 @@ target 'TikTak' do
 
  pod 'Appirater'
  pod 'SDWebImage'
+ pod 'ProgressHUD'
 
 end
