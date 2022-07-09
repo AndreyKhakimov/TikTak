@@ -102,7 +102,17 @@ final class DatabaseManager {
         }
     }
     
+    public func getNotifications(completion: @escaping ([Notification]) -> Void) {
+        completion(Notification.mockData())
+    }
+    
+    public func markNotificationAsHidden(notificationID: String, completion: @escaping (Bool) -> Void) {
+        // TODO: Replace with real code
+        completion(true)
+    }
+    
     public func getAllUsers(completion: ([String]) -> Void) {
         
     }
+    
 }
