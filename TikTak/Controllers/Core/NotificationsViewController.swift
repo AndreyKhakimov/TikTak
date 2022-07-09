@@ -52,6 +52,12 @@ class NotificationsViewController: UIViewController {
         return spinner
     }()
     
+    private let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
+        return control
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableview)
@@ -62,8 +68,20 @@ class NotificationsViewController: UIViewController {
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.refreshControl = refreshControl
         
         fetchNotifications()
+    }
+    
+    @objc func didPullToRefresh(_ sender: UIRefreshControl) {
+        sender.beginRefreshing()
+        DatabaseManager.shared.getNotifications { [weak self] notifications in
+            DispatchQueue.main.async {
+                self?.notifications = notifications
+                self?.tableview.reloadData()
+                sender.endRefreshing()
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
