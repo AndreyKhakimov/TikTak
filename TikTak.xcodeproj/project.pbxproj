@@ -11,6 +11,8 @@
 		42231731287984E0007CD03C /* NotificationsUserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42231730287984E0007CD03C /* NotificationsUserFollowTableViewCell.swift */; };
 		4223173828798FD3007CD03C /* NotificationsPostLikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4223173728798FD3007CD03C /* NotificationsPostLikeTableViewCell.swift */; };
 		4223173A28798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4223173928798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift */; };
+		42271077287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */; };
+		42271079287D98510084B7A7 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */; };
 		422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFC2866107B0067A5DD /* AppDelegate.swift */; };
 		422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFE2866107B0067A5DD /* SceneDelegate.swift */; };
 		422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E002866107B0067A5DD /* HomeViewController.swift */; };
@@ -65,6 +67,8 @@
 		42231730287984E0007CD03C /* NotificationsUserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsUserFollowTableViewCell.swift; sourceTree = "<group>"; };
 		4223173728798FD3007CD03C /* NotificationsPostLikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostLikeTableViewCell.swift; sourceTree = "<group>"; };
 		4223173928798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostCommentTableViewCell.swift; sourceTree = "<group>"; };
+		42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		422B9DF92866107B0067A5DD /* TikTak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422B9DFC2866107B0067A5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422B9DFE2866107B0067A5DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				4262A870286F0E7F005C5693 /* ExplorePostViewModel.swift */,
 				4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */,
 				4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */,
+				42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 		422B9E2B28661D5B0067A5DD /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */,
 				4223173528798F95007CD03C /* Comments */,
 				4223173628798FA6007CD03C /* Camera */,
 				4223173328798F77007CD03C /* Explore */,
@@ -500,6 +506,7 @@
 				422B9E1B28661CAF0067A5DD /* CameraViewController.swift in Sources */,
 				42231731287984E0007CD03C /* NotificationsUserFollowTableViewCell.swift in Sources */,
 				422B9E432868561E0067A5DD /* CommentsViewController.swift in Sources */,
+				42271079287D98510084B7A7 /* ProfileHeaderViewModel.swift in Sources */,
 				422B9E2928661D1D0067A5DD /* TabBarViewController.swift in Sources */,
 				422B9E47286A0FE70067A5DD /* User.swift in Sources */,
 				422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */,
@@ -508,6 +515,7 @@
 				422B9E3528661DC10067A5DD /* AuthenticationManager.swift in Sources */,
 				4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */,
 				422B9E1D28661CBC0067A5DD /* NotificationsViewController.swift in Sources */,
+				42271077287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				422B9E45286A0F6D0067A5DD /* PostComment.swift in Sources */,
 				4223173A28798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift in Sources */,
 				4262A86D286F0CAE005C5693 /* ExploreSectionType.swift in Sources */,
@@ -670,6 +678,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow accessto select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -703,6 +712,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow accessto select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

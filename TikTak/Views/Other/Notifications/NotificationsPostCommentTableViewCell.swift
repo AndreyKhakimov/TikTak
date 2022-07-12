@@ -7,9 +7,20 @@
 
 import UIKit
 
+protocol NotificationsPostCommentTableViewCellDelegate: AnyObject {
+    func notificationsPostCommentTableViewCell(
+        _ cell: NotificationsPostCommentTableViewCell,
+        didTapPostWith identifier: String
+    )
+}
+
 class NotificationsPostCommentTableViewCell: UITableViewCell {
 
     static let identifier = "NotificationsPostCommentTableViewCell"
+    
+    weak var delegate: NotificationsPostCommentTableViewCellDelegate?
+    
+    var postID: String?
     
     private let postThumbnailImageView: UIImageView = {
        let imageView = UIImageView()
@@ -35,10 +46,19 @@ class NotificationsPostCommentTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.clipsToBounds = true
-        contentView.addSubview(postThumbnailImageView)
         contentView.addSubview(label)
         contentView.addSubview(dateLabel)
+        contentView.addSubview(postThumbnailImageView)
         selectionStyle = .none
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPost))
+        postThumbnailImageView.isUserInteractionEnabled = true
+        postThumbnailImageView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func didTapPost() {
+        guard let id = postID else { return }
+        print("Tapped")
+        delegate?.notificationsPostCommentTableViewCell(self, didTapPostWith: id)
     }
     
     required init?(coder: NSCoder) {
@@ -74,7 +94,7 @@ class NotificationsPostCommentTableViewCell: UITableViewCell {
         dateLabel.frame = CGRect(
             x: 10,
             y: label.bottom + 3,
-            width: contentView.width - postThumbnailImageView.width,
+            width: contentView.width - postThumbnailImageView.width - 20,
             height: 40
         )
     }
@@ -90,6 +110,7 @@ class NotificationsPostCommentTableViewCell: UITableViewCell {
         postThumbnailImageView.image = UIImage(named: "Test")
         label.text = notification.text
         dateLabel.text = .date(with: notification.date)
+        postID = postFileName
     }
 
 }

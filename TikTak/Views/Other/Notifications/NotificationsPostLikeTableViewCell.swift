@@ -7,11 +7,22 @@
 
 import UIKit
 
+protocol NotificationsPostLikeTableViewCellDelegate: AnyObject {
+    func notificationsPostLikeTableViewCell(
+        _ cell: NotificationsPostLikeTableViewCell,
+        didTapPostWith identifier: String
+    )
+}
+
 class NotificationsPostLikeTableViewCell: UITableViewCell {
     
     static let identifier = "NotificationsPostLikeTableViewCell"
     
-    private let postThumbnailImageView: UIImageView = {
+    weak var delegate: NotificationsPostLikeTableViewCellDelegate?
+    
+    var postID: String?
+    
+     let postThumbnailImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -35,10 +46,19 @@ class NotificationsPostLikeTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.clipsToBounds = true
-        contentView.addSubview(postThumbnailImageView)
         contentView.addSubview(label)
         contentView.addSubview(dateLabel)
+        contentView.addSubview(postThumbnailImageView)
         selectionStyle = .none
+        postThumbnailImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPost))
+        postThumbnailImageView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func didTapPost() {
+        print("Tapped")
+        guard let id = postID else { return }
+        delegate?.notificationsPostLikeTableViewCell(self, didTapPostWith: id)
     }
     
     required init?(coder: NSCoder) {
@@ -90,6 +110,7 @@ class NotificationsPostLikeTableViewCell: UITableViewCell {
         postThumbnailImageView.image = UIImage(named: "Test")
         label.text = notification.text
         dateLabel.text = .date(with: notification.date)
+        postID = postFileName
     }
 
 }
