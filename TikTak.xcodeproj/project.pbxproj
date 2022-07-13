@@ -13,6 +13,7 @@
 		4223173A28798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4223173928798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift */; };
 		42271077287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */; };
 		42271079287D98510084B7A7 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */; };
+		4227107B287EE32A0084B7A7 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */; };
 		422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFC2866107B0067A5DD /* AppDelegate.swift */; };
 		422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFE2866107B0067A5DD /* SceneDelegate.swift */; };
 		422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E002866107B0067A5DD /* HomeViewController.swift */; };
@@ -69,6 +70,7 @@
 		4223173928798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPostCommentTableViewCell.swift; sourceTree = "<group>"; };
 		42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		422B9DF92866107B0067A5DD /* TikTak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422B9DFC2866107B0067A5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422B9DFE2866107B0067A5DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */,
+				4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */,
 				4223173528798F95007CD03C /* Comments */,
 				4223173628798FA6007CD03C /* Camera */,
 				4223173328798F77007CD03C /* Explore */,
@@ -486,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4227107B287EE32A0084B7A7 /* PostCollectionViewCell.swift in Sources */,
 				4223172F2878C56F007CD03C /* Notifications.swift in Sources */,
 				422B9E3728661DD50067A5DD /* HapticsManager.swift in Sources */,
 				4262A886287309E8005C5693 /* AuthButton.swift in Sources */,

@@ -22,6 +22,13 @@ class PostViewController: UIViewController {
     
     private var playerDidFinishObserver: NSObjectProtocol?
     
+    private let videoView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .black
+        view.clipsToBounds = true
+        return view
+    }()
+    
     private let likeButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "suit.heart.fill"), for: .normal)
@@ -65,6 +72,14 @@ class PostViewController: UIViewController {
         return label
     }()
     
+    private let spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.tintColor = .label
+        spinner.hidesWhenStopped = true
+        spinner.startAnimating()
+        return spinner
+    }()
+    
     // MARK: - Init
     init(model: PostModel) {
         self.model = model
@@ -77,11 +92,10 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(videoView)
+        videoView.addSubview(spinner)
         configureVideo()
-        let colors: [UIColor] = [
-            .green, .orange, .brown, .cyan, .systemPink
-        ]
-        view.backgroundColor = colors.randomElement()
+        view.backgroundColor = .black
         
         setUpButtons()
         setUpDoubleTapToLike()
@@ -90,6 +104,10 @@ class PostViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        videoView.frame = view.bounds
+        spinner.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        spinner.center = videoView.center
         
         let size: CGFloat = 40
         
@@ -161,20 +179,44 @@ class PostViewController: UIViewController {
     }
     
     private func configureVideo() {
-        guard let path = Bundle.main.path(forResource: "BMW", ofType: "mp4") else {
-            return
+        // Path and url for testing
+        //        guard let path = Bundle.main.path(forResource: "BMW", ofType: "mp4") else {
+        //            return
+        //        }
+        //
+        //        let url = URL(fileURLWithPath: path)
+        StorageManager.shared.getDownloadURL(for: model) { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.spinner.stopAnimating()
+                self.spinner.removeFromSuperview()
+                
+                switch result {
+                case .success(let url):
+                    self.player = AVPlayer(url: url)
+                    let playerLayer = AVPlayerLayer(player: self.player)
+                    playerLayer.frame = self.view.bounds
+                    playerLayer.videoGravity = .resizeAspectFill
+                    self.videoView.layer.addSublayer(playerLayer)
+                    self.player?.volume = 0
+                    self.player?.play()
+                case .failure(let error):
+                    guard let path = Bundle.main.path(forResource: "BMW", ofType: "mp4") else {
+                        return
+                    }
+                    
+                    let url = URL(fileURLWithPath: path)
+                    self.player = AVPlayer(url: url)
+                    let playerLayer = AVPlayerLayer(player: self.player)
+                    playerLayer.frame = self.view.bounds
+                    playerLayer.videoGravity = .resizeAspectFill
+                    self.videoView.layer.addSublayer(playerLayer)
+                    self.player?.volume = 0
+                    self.player?.play()
+                }
+            }
         }
-        
-        let url = URL(fileURLWithPath: path)
-        player = AVPlayer(url: url)
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = view.bounds
-        playerLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(playerLayer)
-        player?.volume = 0
-        player?.play()
-        
+    
         guard let player = player else {
             return
         }
@@ -185,7 +227,7 @@ class PostViewController: UIViewController {
         ) { _ in
             player.seek(to: .zero)
             player.play()
-            }
+        }
     }
     
     @objc private func didDoubleTap(_ gesture: UITapGestureRecognizer) {
