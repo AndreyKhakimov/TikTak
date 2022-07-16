@@ -8,16 +8,6 @@
 import UIKit
 import SafariServices
 
-struct SettingsSection {
-    let title: String
-    let options: [SettingsOption]
-}
-
-struct SettingsOption {
-    let title: String
-    let handler: (() -> Void)
-}
-
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var sections = [SettingsSection]()
@@ -25,6 +15,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
         return tableView
     }()
     
@@ -32,8 +23,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         sections = [
             SettingsSection(
+                title: "Preferences",
+                options: [
+                    SettingsOption(title: "Save Video to Photo library", handler: { }),
+                ]
+            ),
+    
+            SettingsSection(
                 title: "Information",
                 options: [
+                    
                     SettingsOption(title: "Terms of Service", handler: { [weak self] in
                         DispatchQueue.main.async {
                             guard let url = URL(string: "https://tiktok.com/legal/terms-of-service") else {
@@ -43,6 +42,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                             self?.present(vc, animated: true, completion: nil)
                         }
                     }),
+                    
                     SettingsOption(title: "Privacy policy", handler: { [weak self] in
                         DispatchQueue.main.async {
                             guard let url = URL(string: "https://tiktok.com/legal/privacy-policy") else {
@@ -144,6 +144,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = sections[indexPath.section].options[indexPath.row]
+        if model.title == "Save Video to Photo library" {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SwitchTableViewCell.identifier,
+                for: indexPath) as? SwitchTableViewCell else {
+                    return UITableViewCell()
+                }
+            cell.delegate = self
+            cell.configure(with: SwitchCellViewModel(title: model.title, isOn: UserDefaults.standard.bool(forKey: "save_video")))
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = model.title
@@ -158,6 +168,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
         let model = sections[indexPath.section].options[indexPath.row]
         model.handler()
+    }
+    
+}
+
+// MARK: - SwitchTableViewCellDelegate
+extension SettingsViewController: SwitchTableViewCellDelegate {
+    
+    func switchTableViewCell(_ cell: SwitchTableViewCell, didUpdateSwitchTo isOn: Bool) {
+        print(isOn)
+        UserDefaults.standard.setValue(isOn, forKey: "save_video")
     }
     
 }

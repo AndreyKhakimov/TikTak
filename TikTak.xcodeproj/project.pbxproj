@@ -15,6 +15,10 @@
 		42271079287D98510084B7A7 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */; };
 		4227107B287EE32A0084B7A7 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */; };
 		4227107D2880BE2A0084B7A7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227107C2880BE290084B7A7 /* EditProfileViewController.swift */; };
+		4227107F2881A7D50084B7A7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227107E2881A7D50084B7A7 /* SwitchTableViewCell.swift */; };
+		42271081288208240084B7A7 /* SwitchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271080288208240084B7A7 /* SwitchCellViewModel.swift */; };
+		4227108328820D970084B7A7 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108228820D970084B7A7 /* SettingsSection.swift */; };
+		4227108528820DA70084B7A7 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108428820DA70084B7A7 /* SettingsOption.swift */; };
 		422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFC2866107B0067A5DD /* AppDelegate.swift */; };
 		422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFE2866107B0067A5DD /* SceneDelegate.swift */; };
 		422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E002866107B0067A5DD /* HomeViewController.swift */; };
@@ -73,6 +77,10 @@
 		42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		4227107C2880BE290084B7A7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		4227107E2881A7D50084B7A7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		42271080288208240084B7A7 /* SwitchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellViewModel.swift; sourceTree = "<group>"; };
+		4227108228820D970084B7A7 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		4227108428820DA70084B7A7 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
 		422B9DF92866107B0067A5DD /* TikTak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422B9DFC2866107B0067A5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422B9DFE2866107B0067A5DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +279,8 @@
 				4262A86A286F0C86005C5693 /* ExploreCell.swift */,
 				4262A86C286F0CAE005C5693 /* ExploreSectionType.swift */,
 				4223172E2878C56F007CD03C /* Notifications.swift */,
+				4227108228820D970084B7A7 /* SettingsSection.swift */,
+				4227108428820DA70084B7A7 /* SettingsOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 				4262A872286F0E9D005C5693 /* ExploreHashtagViewModel.swift */,
 				4262A874286F0EB1005C5693 /* ExploreUserViewModel.swift */,
 				42271078287D98510084B7A7 /* ProfileHeaderViewModel.swift */,
+				42271080288208240084B7A7 /* SwitchCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 			children = (
 				42271076287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift */,
 				4227107A287EE32A0084B7A7 /* PostCollectionViewCell.swift */,
+				4227107E2881A7D50084B7A7 /* SwitchTableViewCell.swift */,
 				4223173528798F95007CD03C /* Comments */,
 				4223173628798FA6007CD03C /* Camera */,
 				4223173328798F77007CD03C /* Explore */,
@@ -501,10 +513,12 @@
 				422B9E3F28671F0D0067A5DD /* Extensions.swift in Sources */,
 				422B9E3328661DB20067A5DD /* DatabaseManager.swift in Sources */,
 				422B9E49286A16110067A5DD /* CommentTableViewCell.swift in Sources */,
+				42271081288208240084B7A7 /* SwitchCellViewModel.swift in Sources */,
 				422B9E1928661CA30067A5DD /* ExploreViewController.swift in Sources */,
 				4262A869286F0C60005C5693 /* ExploreSection.swift in Sources */,
 				422B9E2128661CD60067A5DD /* UserListViewController.swift in Sources */,
 				422B9E2728661D010067A5DD /* SettingsViewController.swift in Sources */,
+				4227108528820DA70084B7A7 /* SettingsOption.swift in Sources */,
 				4262A87F2871A3D1005C5693 /* ExploreManager.swift in Sources */,
 				4262A86F286F0E6B005C5693 /* ExploreBannerViewModel.swift in Sources */,
 				4262A86B286F0C86005C5693 /* ExploreCell.swift in Sources */,
@@ -533,11 +547,13 @@
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,
 				422B9E3128661DA20067A5DD /* StorageManager.swift in Sources */,
 				4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */,
+				4227107F2881A7D50084B7A7 /* SwitchTableViewCell.swift in Sources */,
 				4262A884287309CD005C5693 /* AuthField.swift in Sources */,
 				422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */,
 				422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */,
 				4262A87B28702C23005C5693 /* ExploreUserCollectionViewCell.swift in Sources */,
 				4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */,
+				4227108328820D970084B7A7 /* SettingsSection.swift in Sources */,
 				4262A87728702BFF005C5693 /* ExploreBannerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +702,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to save the video to yout device.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow accessto select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -720,6 +737,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = TikTak;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to record videos.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to record videos.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to save the video to yout device.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow accessto select profile picture from library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
