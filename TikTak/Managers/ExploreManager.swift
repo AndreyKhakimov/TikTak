@@ -90,6 +90,8 @@ final class ExploreManager {
         }
     }
     
+    /// Get Explore data for recent posts
+    /// - Returns: Return collection of models
     public func  getExploreRecentPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
         return exploreData.recentPosts.compactMap { model in
@@ -116,6 +118,8 @@ final class ExploreManager {
         }
     }
     
+    /// Get Explore data for popular posts
+    /// - Returns: Return collection of models
     public func  getExplorePopularPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
         return exploreData.popular.compactMap { model in
@@ -142,6 +146,8 @@ final class ExploreManager {
         }
     }
     
+    /// Get Explore data for recommended posts
+    /// - Returns: Return collection of models
     public func  getExploreRecommendedPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
         return exploreData.recommended.compactMap { model in
@@ -168,6 +174,9 @@ final class ExploreManager {
         }
     }
     
+    
+    /// Get Explore data for trending posts
+    /// - Returns: Return collection of models
     public func  getExploreTrendingPosts() -> [ExplorePostViewModel] {
         guard let exploreData = parseExploreData() else { return [] }
         return exploreData.trendingPosts.compactMap { model in
@@ -195,6 +204,9 @@ final class ExploreManager {
     }
     
     // MARK: - Private
+    
+    /// Parse explore JSON data
+    /// - Returns: Returns an optional response model
     private func parseExploreData() -> ExploreResponse? {
         guard let path = Bundle.main.path(forResource: "explore", ofType: "json") else { return nil }
         

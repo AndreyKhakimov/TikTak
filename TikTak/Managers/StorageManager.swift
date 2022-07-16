@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseStorage
 
+
 final class StorageManager {
     public static let shared = StorageManager()
     
@@ -17,6 +18,11 @@ final class StorageManager {
     
     // Public
     
+    /// Upload a new user video to firebase
+    /// - Parameters:
+    ///   - url: Local file url to video
+    ///   - fileName: Desired video file upload name
+    ///   - completion: Async callback result closure
     public func uploadVideo(from url: URL, fileName: String, completion: @escaping (Bool) -> Void) {
         guard let username = UserDefaults.standard.string(forKey: "username") else { return }
         
@@ -25,6 +31,10 @@ final class StorageManager {
         }
     }
     
+    /// Upload new profile picture
+    /// - Parameters:
+    ///   - image: New image to upload
+    ///   - completion: Async callback of result
     public func uploadProfilePicture(with image: UIImage, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let username = UserDefaults.standard.string(forKey: "username") else { return }
         guard let imageData = image.pngData() else { return }
@@ -48,6 +58,8 @@ final class StorageManager {
         }
     }
     
+    /// Generates a new file name
+    /// - Returns: Return a unique generated file name
     public func generateVideoName() -> String {
         let uuidString = UUID().uuidString
         let number = Int.random(in: 0...1000)
@@ -56,6 +68,10 @@ final class StorageManager {
         return uuidString + "_\(number)_" + "\(unixTimeStamp)" + ".mov"
     }
     
+    /// Get download url of video post
+    /// - Parameters:
+    ///   - post: Post model to get url for
+    ///   - completion: Async callback
     func getDownloadURL(for post: PostModel, completion: @escaping (Result<URL, Error>) -> Void) {
         storageBucket.child(post.videoChildPath).downloadURL { url, error in
             if let error = error {

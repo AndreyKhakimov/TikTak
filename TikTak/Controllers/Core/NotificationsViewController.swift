@@ -27,7 +27,7 @@ class NotificationsViewController: UIViewController {
             NotificationsUserFollowTableViewCell.self,
             forCellReuseIdentifier: NotificationsUserFollowTableViewCell.identifier
         )
-       
+        
         tableview.register(
             NotificationsPostLikeTableViewCell.self,
             forCellReuseIdentifier: NotificationsPostLikeTableViewCell.identifier
@@ -207,19 +207,26 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
 extension NotificationsViewController: NotificationsUserFollowTableViewCellDelegate {
     
     func notificationsUserFollowTableViewCellDelegate(_ cell: NotificationsUserFollowTableViewCell, didTapFollowFor username: String) {
-        DatabaseManager.shared.follow(username: username) { success in
+        DatabaseManager.shared.updateRelationship(
+            for: User(
+                username: username,
+                profilePictureURL: nil,
+                identifier: UUID().uuidString),
+               follow: true
+        ) { success in
             if !success {
-                print("Something went wrong when didTapAvatarFor")
+                // something went wrong
             }
         }
     }
     
     func notificationsUserFollowTableViewCellDelegate(_ cell: NotificationsUserFollowTableViewCell, didTapAvatarFor username: String) {
+        HapticsManager.shared.vibrateForSelection()
         let vc = ProfileViewController(
             user: User(
-            username: username,
-            profilePictureURL: nil,
-            identifier: "123")
+                username: username,
+                profilePictureURL: nil,
+                identifier: "123")
         )
         vc.title = username.uppercased()
         navigationController?.pushViewController(vc, animated: true)
@@ -231,6 +238,7 @@ extension NotificationsViewController: NotificationsUserFollowTableViewCellDeleg
 extension NotificationsViewController: NotificationsPostLikeTableViewCellDelegate {
     
     func notificationsPostLikeTableViewCell(_ cell: NotificationsPostLikeTableViewCell, didTapPostWith identifier: String) {
+        HapticsManager.shared.vibrateForSelection()
         openPost(with: identifier)
     }
     

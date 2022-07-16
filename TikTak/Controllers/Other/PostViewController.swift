@@ -234,7 +234,8 @@ class PostViewController: UIViewController {
         if !model.isLikedByCurrentUser {
             model.isLikedByCurrentUser = true
         }
-        
+        HapticsManager.shared.vibrateForSelection()
+
         let touchPoint = gesture.location(in: view)
         let imageView = UIImageView(image: UIImage(systemName: "suit.heart.fill"))
         imageView.tintColor = .systemRed
@@ -259,10 +260,7 @@ class PostViewController: UIViewController {
                 }
                 
             }
-            
         }
-        
     }
-    
     
 }
