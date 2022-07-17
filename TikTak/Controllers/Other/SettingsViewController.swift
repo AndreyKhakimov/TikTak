@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import Appirater
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -28,7 +29,28 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                     SettingsOption(title: "Save Video to Photo library", handler: { }),
                 ]
             ),
-    
+            SettingsSection(
+                title: "Enjoying the app?",
+                options: [
+                    SettingsOption(title: "Rate App", handler: {
+                        DispatchQueue.main.async {
+                            Appirater.tryToShowPrompt()
+                        }
+                    }),
+                    SettingsOption(title: "Share App", handler: { [weak self] in
+                        DispatchQueue.main.async {
+                            guard let url = URL(string: "https://www.tiktok.com") else {
+                                return
+                            }
+                            let vc = UIActivityViewController(
+                                activityItems: [url],
+                                applicationActivities: []
+                            )
+                            self?.present(vc, animated: true, completion: nil)
+                        }
+                    })
+                ]
+            ),
             SettingsSection(
                 title: "Information",
                 options: [
@@ -42,7 +64,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                             self?.present(vc, animated: true, completion: nil)
                         }
                     }),
-                    
                     SettingsOption(title: "Privacy policy", handler: { [weak self] in
                         DispatchQueue.main.async {
                             guard let url = URL(string: "https://tiktok.com/legal/privacy-policy") else {

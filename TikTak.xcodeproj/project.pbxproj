@@ -19,6 +19,12 @@
 		42271081288208240084B7A7 /* SwitchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271080288208240084B7A7 /* SwitchCellViewModel.swift */; };
 		4227108328820D970084B7A7 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108228820D970084B7A7 /* SettingsSection.swift */; };
 		4227108528820DA70084B7A7 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108428820DA70084B7A7 /* SettingsOption.swift */; };
+		42271087288421CD0084B7A7 /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271086288421CD0084B7A7 /* ExploreResponse.swift */; };
+		422710892884221D0084B7A7 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422710882884221D0084B7A7 /* Banner.swift */; };
+		4227108B2884223B0084B7A7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108A2884223B0084B7A7 /* Post.swift */; };
+		4227108D2884224D0084B7A7 /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108C2884224D0084B7A7 /* Hashtag.swift */; };
+		4227108F288422640084B7A7 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227108E288422640084B7A7 /* Creator.swift */; };
+		42271097288423B80084B7A7 /* TikTakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42271096288423B80084B7A7 /* TikTakTests.swift */; };
 		422B9DFD2866107B0067A5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFC2866107B0067A5DD /* AppDelegate.swift */; };
 		422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9DFE2866107B0067A5DD /* SceneDelegate.swift */; };
 		422B9E012866107B0067A5DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B9E002866107B0067A5DD /* HomeViewController.swift */; };
@@ -66,6 +72,16 @@
 		9E3F9669DDF03158416214C1 /* Pods_TikTak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		42271098288423B80084B7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422B9DF12866107B0067A5DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 422B9DF82866107B0067A5DD;
+			remoteInfo = TikTak;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		01A51ED796B6F54B0CE9C0BA /* Pods_TikTak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		253BB4FBFCCD94EDF097DED0 /* Pods-TikTak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTak.debug.xcconfig"; path = "Target Support Files/Pods-TikTak/Pods-TikTak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +97,13 @@
 		42271080288208240084B7A7 /* SwitchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellViewModel.swift; sourceTree = "<group>"; };
 		4227108228820D970084B7A7 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		4227108428820DA70084B7A7 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
+		42271086288421CD0084B7A7 /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
+		422710882884221D0084B7A7 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		4227108A2884223B0084B7A7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4227108C2884224D0084B7A7 /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
+		4227108E288422640084B7A7 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		42271094288423B80084B7A7 /* TikTakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikTakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42271096288423B80084B7A7 /* TikTakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTakTests.swift; sourceTree = "<group>"; };
 		422B9DF92866107B0067A5DD /* TikTak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422B9DFC2866107B0067A5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422B9DFE2866107B0067A5DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +154,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42271091288423B80084B7A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		422B9DF62866107B0067A5DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,10 +235,31 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		42271095288423B80084B7A7 /* TikTakTests */ = {
+			isa = PBXGroup;
+			children = (
+				42271096288423B80084B7A7 /* TikTakTests.swift */,
+			);
+			path = TikTakTests;
+			sourceTree = "<group>";
+		};
+		4227109D288466470084B7A7 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				42271086288421CD0084B7A7 /* ExploreResponse.swift */,
+				422710882884221D0084B7A7 /* Banner.swift */,
+				4227108A2884223B0084B7A7 /* Post.swift */,
+				4227108C2884224D0084B7A7 /* Hashtag.swift */,
+				4227108E288422640084B7A7 /* Creator.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		422B9DF02866107B0067A5DD = {
 			isa = PBXGroup;
 			children = (
 				422B9DFB2866107B0067A5DD /* TikTak */,
+				42271095288423B80084B7A7 /* TikTakTests */,
 				422B9DFA2866107B0067A5DD /* Products */,
 				413A169595604E30E2FE7051 /* Pods */,
 				27CD51031BD272B2B81387A7 /* Frameworks */,
@@ -219,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				422B9DF92866107B0067A5DD /* TikTak.app */,
+				42271094288423B80084B7A7 /* TikTakTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +333,7 @@
 				4223172E2878C56F007CD03C /* Notifications.swift */,
 				4227108228820D970084B7A7 /* SettingsSection.swift */,
 				4227108428820DA70084B7A7 /* SettingsOption.swift */,
+				4227109D288466470084B7A7 /* Explore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +425,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		42271093288423B80084B7A7 /* TikTakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4227109A288423B80084B7A7 /* Build configuration list for PBXNativeTarget "TikTakTests" */;
+			buildPhases = (
+				42271090288423B80084B7A7 /* Sources */,
+				42271091288423B80084B7A7 /* Frameworks */,
+				42271092288423B80084B7A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42271099288423B80084B7A7 /* PBXTargetDependency */,
+			);
+			name = TikTakTests;
+			productName = TikTakTests;
+			productReference = 42271094288423B80084B7A7 /* TikTakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		422B9DF82866107B0067A5DD /* TikTak */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 422B9E0D2866107D0067A5DD /* Build configuration list for PBXNativeTarget "TikTak" */;
@@ -402,6 +473,10 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					42271093288423B80084B7A7 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 422B9DF82866107B0067A5DD;
+					};
 					422B9DF82866107B0067A5DD = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -421,11 +496,19 @@
 			projectRoot = "";
 			targets = (
 				422B9DF82866107B0067A5DD /* TikTak */,
+				42271093288423B80084B7A7 /* TikTakTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		42271092288423B80084B7A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		422B9DF72866107B0067A5DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,6 +583,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		42271090288423B80084B7A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42271097288423B80084B7A7 /* TikTakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		422B9DF52866107B0067A5DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,15 +628,19 @@
 				422B9E3528661DC10067A5DD /* AuthenticationManager.swift in Sources */,
 				4262A871286F0E7F005C5693 /* ExplorePostViewModel.swift in Sources */,
 				422B9E1D28661CBC0067A5DD /* NotificationsViewController.swift in Sources */,
+				4227108D2884224D0084B7A7 /* Hashtag.swift in Sources */,
 				42271077287D81FE0084B7A7 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				422B9E45286A0F6D0067A5DD /* PostComment.swift in Sources */,
 				4223173A28798FF0007CD03C /* NotificationsPostCommentTableViewCell.swift in Sources */,
 				4262A86D286F0CAE005C5693 /* ExploreSectionType.swift in Sources */,
 				422B9E2328661CE70067A5DD /* SignInViewController.swift in Sources */,
 				422B9E41286726220067A5DD /* PostModel.swift in Sources */,
+				4227108F288422640084B7A7 /* Creator.swift in Sources */,
 				4262A87D28702C37005C5693 /* ExploreHashtagCollectionViewCell.swift in Sources */,
 				422B9E1F28661CC90067A5DD /* ProfileViewController.swift in Sources */,
+				422710892884221D0084B7A7 /* Banner.swift in Sources */,
 				422B9E3128661DA20067A5DD /* StorageManager.swift in Sources */,
+				42271087288421CD0084B7A7 /* ExploreResponse.swift in Sources */,
 				4262A873286F0E9D005C5693 /* ExploreHashtagViewModel.swift in Sources */,
 				4227107F2881A7D50084B7A7 /* SwitchTableViewCell.swift in Sources */,
 				4262A884287309CD005C5693 /* AuthField.swift in Sources */,
@@ -553,12 +648,21 @@
 				422B9DFF2866107B0067A5DD /* SceneDelegate.swift in Sources */,
 				4262A87B28702C23005C5693 /* ExploreUserCollectionViewCell.swift in Sources */,
 				4262A875286F0EB1005C5693 /* ExploreUserViewModel.swift in Sources */,
+				4227108B2884223B0084B7A7 /* Post.swift in Sources */,
 				4227108328820D970084B7A7 /* SettingsSection.swift in Sources */,
 				4262A87728702BFF005C5693 /* ExploreBannerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42271099288423B80084B7A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 422B9DF82866107B0067A5DD /* TikTak */;
+			targetProxy = 42271098288423B80084B7A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		422B9E072866107D0067A5DD /* LaunchScreen.storyboard */ = {
@@ -572,6 +676,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4227109B288423B80084B7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVRW477K7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AAjr.TikTakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikTak.app/TikTak";
+			};
+			name = Debug;
+		};
+		4227109C288423B80084B7A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVRW477K7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AAjr.TikTakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikTak.app/TikTak";
+			};
+			name = Release;
+		};
 		422B9E0B2866107D0067A5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -761,6 +913,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4227109A288423B80084B7A7 /* Build configuration list for PBXNativeTarget "TikTakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4227109B288423B80084B7A7 /* Debug */,
+				4227109C288423B80084B7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		422B9DF42866107B0067A5DD /* Build configuration list for PBXProject "TikTak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
