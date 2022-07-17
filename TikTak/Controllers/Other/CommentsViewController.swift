@@ -21,6 +21,7 @@ class CommentsViewController: UIViewController {
     
     private let tableview: UITableView = {
         let tableview = UITableView()
+        tableview.backgroundColor = .secondarySystemBackground
         tableview.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.identifier)
         return tableview
     }()
@@ -28,7 +29,7 @@ class CommentsViewController: UIViewController {
     private let closeButton: UIButton = {
        let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "xmark"), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .label
         return button
     }()
     
@@ -46,7 +47,7 @@ class CommentsViewController: UIViewController {
         view.addSubview(closeButton)
         view.addSubview(tableview)
         closeButton.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
-        view.backgroundColor = .white
+        view.backgroundColor = .secondarySystemBackground
         fetchPostComments()
         tableview.delegate = self
         tableview.dataSource = self
