@@ -17,7 +17,11 @@ struct PostModel {
     var isLikedByCurrentUser = false
     
     var videoChildPath: String {
-        return "videos/\(user.username.lowercased())/\(fileName)"
+        return "videos/\(user.username.lowercased())/\(fileName)/video.mov"
+    }
+    
+    var videoPreviewPath: String {
+        return "videos/\(user.username.lowercased())/\(fileName)/preview.jpeg"
     }
     
     static func mockModels() -> [PostModel] {

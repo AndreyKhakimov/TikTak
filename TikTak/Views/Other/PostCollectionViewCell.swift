@@ -42,34 +42,18 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     func configure(with post: PostModel) {
         // Get download url
-        StorageManager.shared.getDownloadURL(for: post) { result in
+        StorageManager.shared.getPreviewDownloadURL(for: post) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let url):
                     print("got url: \(url)")
-                    // Generate thumbnail
-                    let asset = AVAsset(url: url)
-                    let generator = AVAssetImageGenerator(asset: asset)
-                    var cgImage: CGImage?
-                    // TODO: - Remake generator concurrency logic
-                    let workItem = DispatchWorkItem {
-                        do {
-                            cgImage = try generator.copyCGImage(at: .zero, actualTime: nil)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                    }
-                    DispatchQueue.global(qos: .userInitiated).async(execute: workItem)
-                    workItem.notify(queue: .main) {
-                        self.imageView.image = UIImage(cgImage: cgImage!)
-                    }
+                    // Download thumbnail
+                    self?.imageView.sd_setImage(with: url, completed: nil)
                 case .failure(let error):
                     print("failed to get download url: \(error)")
                 }
             }
         }
-        
-        
     }
     
 }

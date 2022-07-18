@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseStorage
+import AVFoundation
 
 
 final class StorageManager {
@@ -26,8 +27,29 @@ final class StorageManager {
     public func uploadVideo(from url: URL, fileName: String, completion: @escaping (Bool) -> Void) {
         guard let username = UserDefaults.standard.string(forKey: "username") else { return }
         
-        storageBucket.child("videos/\(username)/\(fileName)").putFile(from: url, metadata: nil) { _, error in
-            completion(error == nil)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            do {
+                let asset = AVAsset(url: url)
+                let generator = AVAssetImageGenerator(asset: asset)
+                let start = DispatchTime.now()
+                let cgImage = try generator.copyCGImage(at: .zero, actualTime: nil)
+                let end = DispatchTime.now()
+                let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+                let timeInterval = Double(nanoTime) / 1_000_000_000
+                print("Time to generate image \(timeInterval) seconds")
+                
+                let uiImage = UIImage(cgImage: cgImage)
+
+                self?.storageBucket.child("videos/\(username)/\(fileName)/video.mov").putFile(from: url, metadata: nil) { _, error in
+                    self?.storageBucket.child("videos/\(username)/\(fileName)/preview.jpeg").putData(uiImage.jpegData(compressionQuality: 0.95) ?? Data(), metadata: nil, completion: { _, error in
+                        completion(error == nil)
+                    })
+                    
+                }
+            } catch {
+                print(error.localizedDescription)
+                completion(false)
+            }
         }
     }
     
@@ -65,7 +87,7 @@ final class StorageManager {
         let number = Int.random(in: 0...1000)
         let unixTimeStamp = Date().timeIntervalSince1970
         
-        return uuidString + "_\(number)_" + "\(unixTimeStamp)" + ".mov"
+        return uuidString + "_\(number)_" + "\(unixTimeStamp)"
     }
     
     /// Get download url of video post
@@ -74,6 +96,18 @@ final class StorageManager {
     ///   - completion: Async callback
     func getDownloadURL(for post: PostModel, completion: @escaping (Result<URL, Error>) -> Void) {
         storageBucket.child(post.videoChildPath).downloadURL { url, error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            else if let url = url {
+                completion(.success(url))
+            }
+        }
+        
+    }
+    
+    func getPreviewDownloadURL(for post: PostModel, completion: @escaping (Result<URL, Error>) -> Void) {
+        storageBucket.child(post.videoPreviewPath).downloadURL { url, error in
             if let error = error {
                 completion(.failure(error))
             }
