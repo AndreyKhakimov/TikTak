@@ -31,6 +31,7 @@ final class StorageManager {
             do {
                 let asset = AVAsset(url: url)
                 let generator = AVAssetImageGenerator(asset: asset)
+                generator.appliesPreferredTrackTransform = true
                 let start = DispatchTime.now()
                 let cgImage = try generator.copyCGImage(at: .zero, actualTime: nil)
                 let end = DispatchTime.now()
